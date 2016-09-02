@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements LoopjInterface {
 
                 LoopjRequest.Method.GET, // Add request method
 
-                ApiManager.CHECK_LOOPJ_WITH_GET, // Add API to call
+                ApiManager.CHECK_LOOPJ_WITH_GET, // Add API URL to call
 
                 RequestParams.testBody("Harsh", "harsh@test.com"), // Add body parameter. If there is no body, use null
 
