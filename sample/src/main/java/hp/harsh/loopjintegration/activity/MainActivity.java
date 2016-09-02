@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements LoopjInterface {
 
         /* Call API using below method
         *
-        * public LoopjRequest(Activity activity,
+        * new LoopjRequest(Activity activity,
         *       Method requestType,
         *       String url,
         *       Map<String, String> params,
@@ -60,12 +60,19 @@ public class MainActivity extends AppCompatActivity implements LoopjInterface {
 
         // Make Loopj request
         new LoopjRequest(MainActivity.this,
+
                 LoopjRequest.Method.GET, // Add request method
+
                 ApiManager.CHECK_LOOPJ_WITH_GET, // Add API to call
+
                 RequestParams.testBody("Harsh", "harsh@test.com"), // Add body parameter. If there is no body, use null
+
                 RequestParams.getNull(), // Add header. If there is no header, use null
+
                 ApiManager.ID_CHECK_LOOPJ_WITH_GET, // Add unique id for each API to differentiate
+
                 true, // boolean for isProgress bar require or not
+
                 this); // Loopj interface
     }
 
